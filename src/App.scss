@@ -1,0 +1,72 @@
+@import './index.module.scss';
+
+* {
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #fff;
+  color: $independence-2;
+  font-family: 'Oxygen', sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+p,
+a {
+  color: $independence-2;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font: normal 400 1.4rem/1.5 'Oxygen', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  background-color: transparent;
+}
+
+ul,
+li {
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  border-style: none;
+}
