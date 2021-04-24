@@ -1,0 +1,53 @@
+/* SCSS HEX */
+$honeydew: #edffecff;
+$light-green: #61e786ff;
+$independence: #5a5766ff;
+$independence-2: #48435c;
+$maximum-blue-purple: #9792e3ff;
+$border-gray: 0px 0px 2px 1px rgba(0, 0, 0, 0.1);
+$border-radius: 10px;
+
+/* SCSS Gradient */
+$gradient-top: linear-gradient(0deg, #edffecff, #61e786ff, #5a5766ff, #48435cff, #9792e3ff);
+$gradient-right: linear-gradient(90deg, #edffecff, #61e786ff, #5a5766ff, #48435cff, #9792e3ff);
+$gradient-bottom: linear-gradient(180deg, #edffecff, #61e786ff, #5a5766ff, #48435cff, #9792e3ff);
+$gradient-left: linear-gradient(270deg, #edffecff, #61e786ff, #5a5766ff, #48435cff, #9792e3ff);
+$gradient-top-right: linear-gradient(45deg, #edffecff, #61e786ff, #5a5766ff, #48435cff, #9792e3ff);
+$gradient-bottom-right: linear-gradient(
+  135deg,
+  #edffecff,
+  #61e786ff,
+  #5a5766ff,
+  #48435cff,
+  #9792e3ff
+);
+$gradient-top-left: linear-gradient(225deg, #edffecff, #61e786ff, #5a5766ff, #48435cff, #9792e3ff);
+$gradient-bottom-left: linear-gradient(
+  315deg,
+  #edffecff,
+  #61e786ff,
+  #5a5766ff,
+  #48435cff,
+  #9792e3ff
+);
+$gradient-radial: radial-gradient(#edffecff, #61e786ff, #5a5766ff, #48435cff, #9792e3ff);
+
+:global {
+  .flexCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .flexColumn {
+    display: flex;
+    flex-direction: column;
+  }
+  .alignCenter {
+    display: flex;
+    align-items: center;
+  }
+  .borderGray {
+    box-shadow: $border-gray;
+    border-radius: $border-radius;
+  }
+}
