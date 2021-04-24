@@ -1,0 +1,68 @@
+@import './../../index.module.scss';
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-height: 80px;
+  padding: 1rem 20px;
+  a {
+    font-size: 1.8rem;
+    transition: all 0.25s ease-in-out;
+    position: relative;
+  }
+}
+
+.nav {
+  & > ul {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li {
+      padding: 0 1rem;
+    }
+  }
+}
+
+.navLink:hover {
+  color: $maximum-blue-purple;
+}
+
+%activeSelect::after {
+  content: '';
+  display: block;
+  width: 120%;
+  height: 4px;
+  background-color: $maximum-blue-purple;
+  position: absolute;
+  bottom: -1rem;
+  left: -50%;
+  right: -50%;
+  margin: 0 auto;
+}
+
+.active {
+  color: $maximum-blue-purple;
+  @extend %activeSelect;
+}
+
+.login {
+  composes: flexCenter from global;
+}
+
+.button {
+  composes: flexCenter from global;
+  width: 110px;
+  min-height: 45px;
+  margin-left: 1.5rem;
+  border-radius: 10px;
+  font-weight: 700;
+  color: #fff;
+  background-color: $light-green;
+  transition: all 0.25s ease-in-out;
+  &:hover {
+    opacity: 0.8;
+  }
+}
