@@ -24,6 +24,12 @@
     "eject": "react-scripts eject",
     "prepare": "husky install"
   },
+  "lint-staged": {
+    "*.jsx": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -54,6 +60,7 @@
     "eslint-plugin-react": "^7.23.1",
     "eslint-plugin-react-hooks": "^4.2.0",
     "husky": "^6.0.0",
+    "lint-staged": "^11.0.0",
     "prettier": "^2.2.1"
   }
 }
