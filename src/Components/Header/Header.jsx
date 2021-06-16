@@ -4,7 +4,7 @@ import Navbar from './Navbar';
 import NavLogin from './NavLogin';
 
 import { header } from './Header.module.scss';
-import useMedia from '../../Hook/useMedia';
+import useMedia from '../../Hooks/useMedia';
 
 export default function Header() {
   const isDesktop = useMedia(968);
