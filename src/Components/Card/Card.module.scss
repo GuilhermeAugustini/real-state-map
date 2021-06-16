@@ -1,0 +1,75 @@
+@import './../../index.module.scss';
+
+.card {
+  composes: flexColumn from global;
+  max-width: 360px;
+}
+.cardHeader {
+  position: relative;
+  width: 100%;
+  min-height: 210px;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+.slide {
+  composes: flexColumn from global;
+  justify-content: space-between;
+  background: no-repeat 20% 50% / cover url('./../../assets/mock/2.jpg');
+  min-height: 210px;
+  border-radius: $border-radius;
+  padding: 8px;
+}
+.buttonFavorite {
+  composes: flexCenter from global;
+  height: 35px;
+  width: 35px;
+  border: 0;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: $border-gray;
+  align-self: flex-end;
+  transition: all 0.25s ease-in-out;
+  cursor: pointer;
+  &[data-selected='false'] {
+    background-color: rgba(0, 0, 0, 0.5);
+    mix-blend-mode: luminosity;
+  }
+}
+.arrows {
+  composes: alignCenter from global;
+  justify-content: space-between;
+  margin: auto 0;
+}
+.arrow {
+  composes: flexCenter from global;
+  height: 35px;
+  width: 35px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+}
+.indicators {
+  composes: flexCenter from global;
+  margin-top: auto;
+  & button {
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    border: 0;
+    background: #c9c9c9;
+    margin-right: 7px;
+    cursor: pointer;
+    &[data-selected='false'] {
+      height: 6px;
+      width: 6px;
+      background: rgba(255, 255, 255, 0.9);
+    }
+  }
+}
+.point {
+}
+
+.cardFooter {
+  composes: flexColumn from global;
+}
