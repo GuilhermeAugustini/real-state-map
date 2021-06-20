@@ -1,0 +1,135 @@
+@import './../../index.module.scss';
+
+.card {
+  composes: flexColumn from global;
+  max-width: 360px;
+  box-shadow: $shadow-card;
+  border-radius: $border-radius;
+}
+.cardHeader {
+  position: relative;
+  width: 100%;
+  min-height: 210px;
+  padding: 10px;
+}
+.slide {
+  composes: flexColumn from global;
+  justify-content: space-between;
+  background: no-repeat 20% 50% / cover url('./../../assets/mock/2.jpg');
+  min-height: 210px;
+  border-radius: $border-radius;
+  padding: 8px;
+}
+.buttonFavorite {
+  composes: flexCenter from global;
+  height: 35px;
+  width: 35px;
+  border: 0;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: $border-gray;
+  align-self: flex-end;
+  transition: all 0.25s ease-in-out;
+  cursor: pointer;
+  &[data-selected='false'] {
+    background-color: rgba(0, 0, 0, 0.5);
+    mix-blend-mode: luminosity;
+  }
+}
+.arrows {
+  composes: alignCenter from global;
+  justify-content: space-between;
+  margin: auto 0;
+}
+.arrow {
+  composes: flexCenter from global;
+  height: 35px;
+  width: 35px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+}
+.indicators {
+  composes: flexCenter from global;
+  margin-top: auto;
+  & button {
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    border: 0;
+    background: #c9c9c9;
+    margin-right: 7px;
+    cursor: pointer;
+    &[data-selected='false'] {
+      height: 6px;
+      width: 6px;
+      background: rgba(255, 255, 255, 0.9);
+    }
+  }
+}
+.point {
+}
+
+.cardFooter {
+  composes: flexColumn from global;
+  padding: 20px 30px;
+}
+
+.options {
+  composes: alignCenter from global;
+  justify-content: flex-start;
+}
+.option {
+  composes: alignCenter from global;
+  gap: 20px;
+  & span {
+    font-family: Oxygen;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 19px;
+    padding-right: 20px;
+  }
+}
+.newProperty {
+  composes: flexCenter from global;
+  border-radius: $border-radius;
+  background-color: $maximum-blue-purple;
+  color: #fff;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+  padding: 4px 23px;
+  width: max-content;
+  text-transform: uppercase;
+  margin: 0 0 auto auto;
+}
+.information {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.title {
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 21px;
+  color: rgba(72, 67, 92, 0.8);
+}
+
+.price {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 24px;
+  color: $independence-2;
+}
+.address {
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(72, 67, 92, 0.5);
+}
