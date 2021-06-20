@@ -1,21 +1,25 @@
 @import './../../index.module.scss';
 
 .card {
-  composes: flexColumn from global;
-  max-width: 360px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  max-width: 740px;
+  box-shadow: $shadow-card;
+  border-radius: $border-radius;
 }
 .cardHeader {
   position: relative;
   width: 100%;
-  min-height: 210px;
-  padding: 10px;
-  border: 1px solid #ddd;
+  flex-basis: 54%;
+  min-height: 305px;
+  padding: 16px;
 }
 .slide {
   composes: flexColumn from global;
   justify-content: space-between;
   background: no-repeat 20% 50% / cover url('./../../assets/mock/2.jpg');
-  min-height: 210px;
+  min-height: 305px;
   border-radius: $border-radius;
   padding: 8px;
 }
@@ -72,4 +76,69 @@
 
 .cardFooter {
   composes: flexColumn from global;
+  padding: 16px 30px 62px 14px;
+}
+
+.options {
+  composes: alignCenter from global;
+  justify-content: flex-start;
+  margin-top: 58px;
+}
+.option {
+  composes: alignCenter from global;
+  gap: 20px;
+  & span {
+    font-family: Oxygen;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+line-height: 23px;
+    padding-right: 20px;
+  }
+}
+.newProperty {
+  composes: flexCenter from global;
+  border-radius: $border-radius;
+  background-color: $maximum-blue-purple;
+  color: #fff;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+  padding: 4px 23px;
+  width: max-content;
+  text-transform: uppercase;
+  margin: 0 0 auto auto;
+}
+.information {
+  display: flex;
+  flex-direction: column-reverse;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 100%;
+  & div {
+    margin-top: auto;
+  }
+}
+
+.title {
+  font-size: 20px;
+line-height: 25px;
+  font-weight: bold;
+  color: rgba(72, 67, 92, 0.8);
+}
+
+.price {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+line-height: 28px;
+  color: $independence-2;
+}
+.address {
+  font-size: 17px;
+line-height: 21px;
+  color: rgba(72, 67, 92, 0.5);
 }

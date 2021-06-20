@@ -15,6 +15,13 @@ import {
   cardHeader,
   indicators,
   slide,
+  options,
+  option,
+  newProperty,
+  address,
+  price,
+  title,
+  information,
 } from './Card.module.scss';
 
 export default function Card() {
@@ -52,9 +59,28 @@ export default function Card() {
         </div>
       </div>
       <div className={cardFooter}>
-        <Dorms />
-        <Area />
-        <Bathrooms />
+        <div className={information}>
+          <div>
+            <p className={price}>$ 650.000</p>
+            <p className={title}>Condomínio Espanha</p>
+            <p className={address}>Alphavile - Barueri, São Paulo</p>
+          </div>
+          <span className={newProperty}>New</span>
+        </div>
+        <div className={options}>
+          <div className={option}>
+            <Dorms />
+            <span>3</span>
+          </div>
+          <div className={option}>
+            <Bathrooms />
+            <span>3</span>
+          </div>
+          <div className={option}>
+            <Area />
+            <span>105 m²</span>
+          </div>
+        </div>
       </div>
     </div>
   );
