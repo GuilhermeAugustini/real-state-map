@@ -4,8 +4,8 @@ $light-green: #61e786ff;
 $independence: #5a5766ff;
 $independence-2: #48435c;
 $maximum-blue-purple: #9792e3ff;
-$border-gray: 0px 0px 2px 1px rgba(0, 0, 0, 0.1);
-$shadow-card: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
+$border-gray: 0 0 2px 1px rgba(0, 0, 0, 0.1);
+$shadow-card: 0 0 5px 1px rgba(0, 0, 0, 0.1);
 $border-radius: 10px;
 
 /* SCSS Gradient */
@@ -35,20 +35,23 @@ $gradient-radial: radial-gradient(#edffecff, #61e786ff, #5a5766ff, #48435cff, #9
 
 :global {
   .flexCenter {
-    display: flex;
     align-items: center;
+    display: flex;
     justify-content: center;
   }
+
   .flexColumn {
     display: flex;
     flex-direction: column;
   }
+
   .alignCenter {
-    display: flex;
     align-items: center;
+    display: flex;
   }
+
   .borderGray {
-    box-shadow: $border-gray;
     border-radius: $border-radius;
+    box-shadow: $border-gray;
   }
 }

@@ -1,31 +1,33 @@
 @import './../../index.module.scss';
 
 .filter {
-  composes: flexColumn from global;
+  composes: flexcolumn from global;
   max-width: 50%;
 }
 
 .filterUp,
 .filterDown {
-  composes: alignCenter from global;
+  composes: aligncenter from global;
   gap: 20px;
   padding-bottom: 16px;
 }
 
 .inputSearch {
-  composes: borderGray alignCenter from global;
-  position: relative;
-  width: 100%;
+  composes: bordergray aligncenter from global;
   height: 40px;
   padding: 0 1rem;
-  & > input {
-    width: 100%;
-    height: 100%;
-    padding-left: 1rem;
-    font: normal 400 1.6rem/1.5 'Oxygen', sans-serif;
-    color: $independence-2;
+  position: relative;
+  width: 100%;
+
+  > input {
     appearance: none;
     border: 0;
+    color: $independence-2;
+    font: normal 400 1.6rem/1.5 'Oxygen', sans-serif;
+    height: 100%;
+    padding-left: 1rem;
+    width: 100%;
+
     &::placeholder {
       color: $independence-2 + 75%;
       opacity: 1;
@@ -34,18 +36,19 @@
 }
 
 .button {
-  composes: borderGray flexCenter from global;
-  width: 131px;
-  flex: 0 0 131px;
-  height: 40px;
-  padding: 5px;
-  font: normal 400 1.6rem/1.5 'Oxygen', sans-serif;
-  color: $independence-2;
   appearance: none;
   background-color: #fff;
   border: 0;
+  color: $independence-2;
+  composes: bordergray flexcenter from global;
   cursor: pointer;
-  & > span {
+  flex: 0 0 131px;
+  font: normal 400 1.6rem/1.5 'Oxygen', sans-serif;
+  height: 40px;
+  padding: 5px;
+  width: 131px;
+
+  > span {
     padding-left: 12px;
   }
 }
@@ -53,34 +56,36 @@
 .results {
   flex: 0 0 auto;
   font-size: 1.6rem;
-  padding-left: 20px;
   margin-bottom: 0;
   margin-right: auto;
+  padding-left: 20px;
 }
 
 .sort {
-  composes: flexCenter from global;
+  composes: flexcenter from global;
   font: normal 400 1.6rem/1.5 'Oxygen', sans-serif;
-  & > span {
+
+  > span {
     padding-right: 10px;
   }
 }
 
 .views {
-  composes: flexCenter from global;
+  composes: flexcenter from global;
   gap: 10px;
 }
 
 .viewButton {
-  composes: flexCenter from global;
-  width: 40px;
-  flex: 0 0 40px;
-  height: 40px;
   background-color: transparent;
   border: 0;
   border-radius: $border-radius;
+  composes: flexcenter from global;
   cursor: pointer;
+  flex: 0 0 40px;
+  height: 40px;
   transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  width: 40px;
+
   &:hover > svg > path {
     fill: $maximum-blue-purple;
   }
@@ -88,8 +93,9 @@
 
 .active {
   background: rgba(72, 67, 92, 0.07);
-  box-shadow: inset 0px 0px 4px 2px rgba(0, 0, 0, 0.02);
-  & > svg > path {
+  box-shadow: inset 0 0 4px 2px rgba(0, 0, 0, 0.02);
+
+  > svg > path {
     fill: $maximum-blue-purple;
   }
 }

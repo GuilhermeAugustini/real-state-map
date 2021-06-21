@@ -1,113 +1,123 @@
-@import './../../index.module.scss';
+@import '../../../index.module.scss';
 
 .card {
-  composes: flexColumn from global;
-  max-width: 360px;
-  box-shadow: $shadow-card;
   border-radius: $border-radius;
+  box-shadow: $shadow-card;
+  composes: flexcolumn from global;
+  max-width: 360px;
 }
+
 .cardHeader {
-  position: relative;
-  width: 100%;
   min-height: 210px;
   padding: 10px;
+  position: relative;
+  width: 100%;
 }
+
 .slide {
-  composes: flexColumn from global;
-  justify-content: space-between;
   background: no-repeat 20% 50% / cover url('./../../assets/mock/2.jpg');
-  min-height: 210px;
   border-radius: $border-radius;
+  composes: flexcolumn from global;
+  justify-content: space-between;
+  min-height: 210px;
   padding: 8px;
 }
+
 .buttonFavorite {
-  composes: flexCenter from global;
-  height: 35px;
-  width: 35px;
+  align-self: flex-end;
+  background-color: #fff;
   border: 0;
   border-radius: 50%;
-  background-color: #fff;
   box-shadow: $border-gray;
-  align-self: flex-end;
-  transition: all 0.25s ease-in-out;
+  composes: flexcenter from global;
   cursor: pointer;
+  height: 35px;
+  transition: all 0.25s ease-in-out;
+  width: 35px;
+
   &[data-selected='false'] {
     background-color: rgba(0, 0, 0, 0.5);
     mix-blend-mode: luminosity;
   }
 }
+
 .arrows {
-  composes: alignCenter from global;
+  composes: aligncenter from global;
   justify-content: space-between;
   margin: auto 0;
 }
+
 .arrow {
-  composes: flexCenter from global;
-  height: 35px;
-  width: 35px;
+  background: rgba(255, 255, 255, 0.8);
   border: 0;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.8);
+  composes: flexcenter from global;
   cursor: pointer;
+  height: 35px;
+  width: 35px;
 }
+
 .indicators {
-  composes: flexCenter from global;
+  composes: flexcenter from global;
   margin-top: auto;
+
   & button {
-    height: 5px;
-    width: 5px;
-    border-radius: 50%;
-    border: 0;
     background: #c9c9c9;
-    margin-right: 7px;
+    border: 0;
+    border-radius: 50%;
     cursor: pointer;
+    height: 5px;
+    margin-right: 7px;
+    width: 5px;
+
     &[data-selected='false'] {
+      background: rgba(255, 255, 255, 0.9);
       height: 6px;
       width: 6px;
-      background: rgba(255, 255, 255, 0.9);
     }
   }
 }
-.point {
-}
 
 .cardFooter {
-  composes: flexColumn from global;
+  composes: flexcolumn from global;
   padding: 20px 30px;
 }
 
 .options {
-  composes: alignCenter from global;
+  composes: aligncenter from global;
   justify-content: flex-start;
 }
+
 .option {
-  composes: alignCenter from global;
+  composes: aligncenter from global;
   gap: 20px;
+
   & span {
-    font-family: Oxygen;
+    font-size: 15px;
     font-style: normal;
     font-weight: bold;
-    font-size: 15px;
     line-height: 19px;
     padding-right: 20px;
   }
 }
+
 .newProperty {
-  composes: flexCenter from global;
-  border-radius: $border-radius;
   background-color: $maximum-blue-purple;
+  border-radius: $border-radius;
   color: #fff;
+  composes: flexcenter from global;
   font-size: 14px;
   font-style: normal;
   font-weight: 700;
+  letter-spacing: 0;
   line-height: 18px;
-  letter-spacing: 0em;
-  text-align: left;
-  padding: 4px 23px;
-  width: max-content;
-  text-transform: uppercase;
   margin: 0 0 auto auto;
+  padding: 4px 23px;
+  text-align: left;
+  text-transform: uppercase;
+  width: max-content;
 }
+
 .information {
   display: flex;
   flex-wrap: wrap;
@@ -115,21 +125,22 @@
 }
 
 .title {
+  color: rgba(72, 67, 92, 0.8);
   font-size: 17px;
   font-weight: bold;
   line-height: 21px;
-  color: rgba(72, 67, 92, 0.8);
 }
 
 .price {
+  color: $independence-2;
+  font-size: 19px;
   font-style: normal;
   font-weight: bold;
-  font-size: 19px;
   line-height: 24px;
-  color: $independence-2;
 }
+
 .address {
+  color: rgba(72, 67, 92, 0.5);
   font-size: 14px;
   line-height: 18px;
-  color: rgba(72, 67, 92, 0.5);
 }
