@@ -23,8 +23,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "prepare": "husky install",
-    "stylelint": "stylelint \"**/*.scss\"",
-    "stylelint-fix": "stylelint \"**/*.scss\" --fix"
+    "stylelint": "stylelint \"src/**/*.scss\"",
+    "stylelint-fix": "stylelint \"src/**/*.scss\" --fix"
   },
   "lint-staged": {
     "*.jsx": [
@@ -65,9 +65,11 @@
     "lint-staged": "^11.0.0",
     "prettier": "^2.2.1",
     "stylelint": "^13.13.1",
+    "stylelint-config-css-modules": "^2.2.0",
     "stylelint-config-recommended": "^5.0.0",
     "stylelint-config-sass-guidelines": "^8.0.0",
     "stylelint-config-standard": "^22.0.0",
+    "stylelint-css-modules": "^1.2.0-globals",
     "stylelint-scss": "^3.19.0"
   }
 }
