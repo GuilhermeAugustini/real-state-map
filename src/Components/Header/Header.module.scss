@@ -52,14 +52,14 @@
 }
 
 .login {
-  composes: flexcenter from global;
+  composes: flexCenter from global;
 }
 
 .button {
   background-color: $light-green;
   border-radius: 10px;
   color: #fff;
-  composes: flexcenter from global;
+  composes: flexCenter from global;
   font-weight: 700;
   margin-left: 1.5rem;
   min-height: 45px;

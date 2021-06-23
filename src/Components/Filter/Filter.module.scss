@@ -1,19 +1,19 @@
 @import './../../index.module.scss';
 
 .filter {
-  composes: flexcolumn from global;
+  composes: flexColumn from global;
   max-width: 50%;
 }
 
 .filterUp,
 .filterDown {
-  composes: aligncenter from global;
+  composes: alignCenter from global;
   gap: 20px;
   padding-bottom: 16px;
 }
 
 .inputSearch {
-  composes: bordergray aligncenter from global;
+  composes: borderGray alignCenter from global;
   height: 40px;
   padding: 0 1rem;
   position: relative;
@@ -40,7 +40,7 @@
   background-color: #fff;
   border: 0;
   color: $independence-2;
-  composes: bordergray flexcenter from global;
+  composes: borderGray flexCenter from global;
   cursor: pointer;
   flex: 0 0 131px;
   font: normal 400 1.6rem/1.5 'Oxygen', sans-serif;
@@ -62,7 +62,7 @@
 }
 
 .sort {
-  composes: flexcenter from global;
+  composes: flexCenter from global;
   font: normal 400 1.6rem/1.5 'Oxygen', sans-serif;
 
   > span {
@@ -71,7 +71,7 @@
 }
 
 .views {
-  composes: flexcenter from global;
+  composes: flexCenter from global;
   gap: 10px;
 }
 
@@ -79,7 +79,7 @@
   background-color: transparent;
   border: 0;
   border-radius: $border-radius;
-  composes: flexcenter from global;
+  composes: flexCenter from global;
   cursor: pointer;
   flex: 0 0 40px;
   height: 40px;

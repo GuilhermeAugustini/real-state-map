@@ -3,7 +3,7 @@
 .card {
   border-radius: $border-radius;
   box-shadow: $shadow-card;
-  composes: flexcolumn from global;
+  composes: flexColumn from global;
   max-width: 360px;
 }
 
@@ -17,7 +17,7 @@
 .slide {
   background: no-repeat 20% 50% / cover url('./../../assets/mock/2.jpg');
   border-radius: $border-radius;
-  composes: flexcolumn from global;
+  composes: flexColumn from global;
   justify-content: space-between;
   min-height: 210px;
   padding: 8px;
@@ -29,7 +29,7 @@
   border: 0;
   border-radius: 50%;
   box-shadow: $border-gray;
-  composes: flexcenter from global;
+  composes: flexCenter from global;
   cursor: pointer;
   height: 35px;
   transition: all 0.25s ease-in-out;
@@ -42,7 +42,7 @@
 }
 
 .arrows {
-  composes: aligncenter from global;
+  composes: alignCenter from global;
   justify-content: space-between;
   margin: auto 0;
 }
@@ -51,14 +51,14 @@
   background: rgba(255, 255, 255, 0.8);
   border: 0;
   border-radius: 50%;
-  composes: flexcenter from global;
+  composes: flexCenter from global;
   cursor: pointer;
   height: 35px;
   width: 35px;
 }
 
 .indicators {
-  composes: flexcenter from global;
+  composes: flexCenter from global;
   margin-top: auto;
 
   & button {
@@ -79,17 +79,17 @@
 }
 
 .cardFooter {
-  composes: flexcolumn from global;
+  composes: flexColumn from global;
   padding: 20px 30px;
 }
 
 .options {
-  composes: aligncenter from global;
+  composes: alignCenter from global;
   justify-content: flex-start;
 }
 
 .option {
-  composes: aligncenter from global;
+  composes: alignCenter from global;
   gap: 20px;
 
   & span {
@@ -105,7 +105,7 @@
   background-color: $maximum-blue-purple;
   border-radius: $border-radius;
   color: #fff;
-  composes: flexcenter from global;
+  composes: flexCenter from global;
   font-size: 14px;
   font-style: normal;
   font-weight: 700;
