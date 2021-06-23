@@ -30,6 +30,9 @@
     "*.jsx": [
       "eslint --fix",
       "prettier --write"
+    ],
+    "*.scss": [
+      "stylelint --fix"
     ]
   },
   "eslintConfig": {
