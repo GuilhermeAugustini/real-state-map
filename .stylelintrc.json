@@ -32,6 +32,10 @@
     ],
     "no-descending-specificity": null,
     "selector-class-pattern": "^[a-z][a-zA-Z0-9]+$",
-    "at-rule-no-unknown": [true, { "ignoreAtRules": ["extend"] }]
+    "at-rule-no-unknown": [true, { "ignoreAtRules": ["extend"] }],
+    "value-keyword-case": [
+      "lower",
+      { "ignoreKeywords": ["/^[a-z][a-zA-Z]+$/"], "ignoreProperties": ["/^[a-z][a-zA-Z]+$/"] }
+    ]
   }
 }
