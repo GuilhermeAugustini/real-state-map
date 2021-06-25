@@ -1,0 +1,40 @@
+@import './../../index.module.scss';
+
+.container {
+  display: flex;
+}
+
+.containerFilter {
+  composes: flexColumn from global;
+  display: flex;
+  width: 100%;
+  flex: 0 0 50%;
+  padding-inline: 20px;
+}
+
+.overflow {
+  padding: 10px;
+  max-height: 65vh;
+  display: flex;
+  gap: 16px;
+  composes: flexColumn from global;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #48435c80 transparent;
+  touch-action: auto;
+}
+
+.overflow::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.overflow::-webkit-scrollbar {
+  width: 8px;
+  background: transparent;
+}
+
+.overflow::-webkit-scrollbar-thumb {
+  background: #48435c80;
+  border-radius: 30px;
+}
