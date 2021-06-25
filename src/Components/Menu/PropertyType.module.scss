@@ -1,0 +1,8 @@
+@import './../../index.module';
+
+.type {
+  background: rgba(72, 67, 92, 0.07);
+  border-radius: $border-radius;
+  height: 105px;
+  composes: flexCenter from global;
+}
