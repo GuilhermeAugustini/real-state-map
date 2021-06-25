@@ -1,15 +1,14 @@
 import classNames from 'classnames';
-import { ReactComponent as Search } from '../../assets/Icons/search.svg';
 import { ReactComponent as ViewGrid } from '../../assets/Icons/viewGrid.svg';
 import { ReactComponent as ViewList } from '../../assets/Icons/viewList.svg';
 import { ReactComponent as FilterIcon } from '../../assets/Icons/filter.svg';
 import { ReactComponent as Sort } from '../../assets/Icons/sort.svg';
+import InputSearch from '../Inputs/InputSearch/InputSearch';
 
 import {
   filter,
   filterUp,
   filterDown,
-  inputSearch,
   button,
   sort,
   results,
@@ -22,10 +21,7 @@ export default function Filter() {
   return (
     <div className={filter}>
       <div className={filterUp}>
-        <label htmlFor="search" className={inputSearch}>
-          <Search />
-          <input type="text" id="search" placeholder="Search" />
-        </label>
+        <InputSearch />
         <button type="button" className={button}>
           <FilterIcon />
           <span>Filter</span>
