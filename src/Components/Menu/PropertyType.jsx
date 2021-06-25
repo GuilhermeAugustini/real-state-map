@@ -10,5 +10,5 @@ export default function PropertyType({ icon }) {
   );
 }
 PropertyType.propTypes = {
-  icon: ProtoTypes.node.isRequired,
+  icon: ProtoTypes.elementType.isRequired,
 };
