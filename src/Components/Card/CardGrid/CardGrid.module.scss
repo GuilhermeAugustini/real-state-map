@@ -15,7 +15,7 @@
 }
 
 .slide {
-  background: no-repeat 20% 50% / cover url('./../../assets/mock/2.jpg');
+  background: no-repeat 20% 50% / cover url('./../../../assets/mock/2.jpg');
   border-radius: $border-radius;
   composes: flexColumn from global;
   justify-content: space-between;
