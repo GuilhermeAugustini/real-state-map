@@ -1,0 +1,24 @@
+@import './../../../index.module';
+
+.inputSearch {
+  composes: borderGray alignCenter from global;
+  height: 40px;
+  padding: 0 1rem;
+  position: relative;
+  width: 100%;
+
+  > input {
+    appearance: none;
+    border: 0;
+    color: $independence-2;
+    font: normal 400 1.6rem/1.5 'Oxygen', sans-serif;
+    height: 100%;
+    padding-left: 1rem;
+    width: 100%;
+
+    &::placeholder {
+      color: $independence-2 + 75%;
+      opacity: 1;
+    }
+  }
+}
