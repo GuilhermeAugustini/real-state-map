@@ -24,15 +24,22 @@
     "eject": "react-scripts eject",
     "prepare": "husky install",
     "stylelint": "stylelint \"src/**/*.scss\"",
-    "stylelint-fix": "stylelint \"src/**/*.scss\" --fix"
+    "stylelint-fix": "stylelint \"src/**/*.scss\" --fix",
+    "editorconfig-lint": "lint-staged-editorconfig"
   },
   "lint-staged": {
     "*.jsx": [
       "eslint --fix",
-      "prettier --write"
+      "prettier --write",
+      "git add -A"
     ],
     "*.scss": [
-      "stylelint --fix"
+      "stylelint --fix",
+      "git add -A"
+    ],
+    "*": [
+      "lint-staged-editorconfig",
+      "git add -A"
     ]
   },
   "eslintConfig": {
@@ -56,6 +63,7 @@
   "devDependencies": {
     "@commitlint/cli": "^12.1.1",
     "@commitlint/config-conventional": "^12.1.1",
+    "@types/mapbox-gl": "^2.3.0",
     "eslint": "^7.18.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^8.1.0",
@@ -66,6 +74,7 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "husky": "^6.0.0",
     "lint-staged": "^11.0.0",
+    "lint-staged-editorconfig": "^0.1.0",
     "prettier": "^2.2.1",
     "stylelint": "^13.13.1",
     "stylelint-config-css-modules": "^2.2.0",
