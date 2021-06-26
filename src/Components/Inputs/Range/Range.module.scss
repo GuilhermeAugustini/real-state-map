@@ -1,0 +1,108 @@
+@import './../../../index.module';
+
+.container {
+  composes: flexCenter flexColumn from global;
+  gap: 24px;
+}
+
+.slider {
+  padding-block: 5px;
+  width: 100%;
+  position: relative;
+}
+
+.rail {
+  @extend %absolute;
+
+  background: #c9c9c9;
+  border-radius: $border-radius;
+  height: 5px;
+  width: 100%;
+}
+
+%absolute {
+  position: absolute;
+  top: 0;
+  display: block;
+}
+
+.track {
+  @extend %absolute;
+
+  background: #61e786;
+  height: 5px;
+  width: 50%;
+  left: 15%;
+}
+
+.thumb {
+  @extend %absolute;
+
+  background: #fff;
+  box-shadow: $border-gray;
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  top: -50%;
+  left: 15%;
+  z-index: 1;
+  cursor: pointer;
+
+  &:last-child {
+    left: calc(15% + 50%);
+  }
+
+  &:hover {
+    box-shadow: $shadow-card;
+  }
+}
+
+.outputs {
+  display: flex;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 7px;
+  width: 100%;
+}
+
+.output {
+  display: block;
+  border-radius: $border-radius;
+  box-shadow: $border-gray;
+  background: #fff;
+  min-height: 40px;
+  border: 0;
+  padding: 6px 10px;
+  position: relative;
+  flex-basis: calc(50% - (7px / 2));
+  max-width: calc(50% - (7px / 2));
+}
+
+.label {
+  composes: flexColumn from global;
+  font-size: 1.3rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0;
+  color: #48435cbf;
+  top: -9%;
+  position: relative;
+
+  &::before {
+    content: '$';
+    position: absolute;
+    bottom: 0;
+    color: $independence-2;
+    font-size: 1.4rem;
+  }
+}
+
+.input {
+  border: 0;
+  color: $independence-2;
+  font-size: 1.4rem;
+  margin-top: 2px;
+  line-height: 18px;
+  margin-left: 12px;
+  font-weight: 500;
+}
