@@ -1,0 +1,35 @@
+@import '../../../index.module';
+
+.controls {
+  background: rgba(229, 229, 229, 0.4);
+  border-radius: $border-radius;
+  composes: flexCenter from global;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+
+  & svg {
+    fill: #48435ccc;
+  }
+}
+
+.input {
+  composes: borderGray alignCenter from global;
+  appearance: none;
+  border: 0;
+  color: $independence-2;
+  font: normal 700 1.6rem/1.5 'Oxygen', sans-serif;
+  height: 40px;
+  width: 60px;
+  text-align: center;
+
+  &::placeholder {
+    color: $independence-2 + 75%;
+    opacity: 1;
+  }
+}
+
+.container {
+  composes: alignCenter from global;
+  gap: 16px;
+}
