@@ -1,40 +1,34 @@
 @import './../../index.module.scss';
 
 .container {
-  display: flex;
+  display: grid;
+  grid-template-columns: 55% 45%;
+  min-height: calc(100vh - 90px);
 }
 
 .containerFilter {
   composes: flexColumn from global;
   display: flex;
   width: 100%;
-  flex: 0 0 50%;
+  max-width: 100%;
   padding-inline: 20px;
 }
 
-.overflow {
+.containerOverflow {
   padding: 10px;
+  padding-bottom: 30px;
   max-height: 65vh;
   display: flex;
   gap: 16px;
   composes: flexColumn from global;
-  overflow-y: auto;
-  overflow-x: hidden;
-  scrollbar-width: thin;
-  scrollbar-color: #48435c80 transparent;
-  touch-action: auto;
+
+  &[data-grid="true"] {
+    display: grid;
+    grid-template-columns: repeat(2, calc(50% - 10px));
+    grid-template-rows: auto;
+  }
 }
 
-.overflow::-webkit-scrollbar-track {
-  background-color: transparent;
-}
-
-.overflow::-webkit-scrollbar {
-  width: 8px;
-  background: transparent;
-}
-
-.overflow::-webkit-scrollbar-thumb {
-  background: #48435c80;
-  border-radius: 30px;
+.overflow {
+  height: 100%;
 }
