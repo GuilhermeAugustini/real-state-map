@@ -4,7 +4,6 @@
   border-radius: $border-radius;
   box-shadow: $shadow-card;
   composes: flexColumn from global;
-  max-width: 360px;
 }
 
 .cardHeader {
@@ -116,12 +115,16 @@
   text-align: left;
   text-transform: uppercase;
   width: max-content;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .information {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 30px;
+  position: relative;
 }
 
 .title {
