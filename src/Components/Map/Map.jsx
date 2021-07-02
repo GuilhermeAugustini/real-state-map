@@ -133,7 +133,7 @@ export default function Map() {
   useEffect(() => {
     function handleError(error) {
       const { code } = error;
-      console.error('error', code);
+      return code;
     }
     navigator.geolocation.getCurrentPosition((position) => {
       setLng(position.coords.longitude);
