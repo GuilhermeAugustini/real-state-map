@@ -1,4 +1,5 @@
 import classNames from 'classnames';
+import ProtoTypes from 'prop-types';
 import { ReactComponent as ViewGrid } from '../../assets/Icons/viewGrid.svg';
 import { ReactComponent as ViewList } from '../../assets/Icons/viewList.svg';
 import { ReactComponent as FilterIcon } from '../../assets/Icons/filter.svg';
@@ -17,12 +18,12 @@ import {
   active,
 } from './Filter.module.scss';
 
-export default function Filter() {
+export default function Filter({ setFilter, grid }) {
   return (
     <div className={filter}>
       <div className={filterUp}>
         <InputSearch />
-        <button type="button" className={button}>
+        <button type="button" className={button} onClick={() => setFilter({ menu: true })}>
           <FilterIcon />
           <span>Filter</span>
         </button>
@@ -40,10 +41,18 @@ export default function Filter() {
           </button>
         </div>
         <div className={views}>
-          <button type="button" className={classNames(viewButton, active)}>
+          <button
+            type="button"
+            className={classNames(viewButton, grid && active)}
+            onClick={() => setFilter({ grid: true })}
+          >
             <ViewGrid />
           </button>
-          <button type="button" className={viewButton}>
+          <button
+            type="button"
+            className={classNames(viewButton, !grid && active)}
+            onClick={() => setFilter({ grid: false })}
+          >
             <ViewList />
           </button>
         </div>
@@ -51,3 +60,7 @@ export default function Filter() {
     </div>
   );
 }
+Filter.propTypes = {
+  setFilter: ProtoTypes.func.isRequired,
+  grid: ProtoTypes.bool.isRequired,
+};
