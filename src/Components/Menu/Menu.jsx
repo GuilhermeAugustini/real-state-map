@@ -1,3 +1,4 @@
+import ProtoTypes from 'prop-types';
 import { ReactComponent as Back } from '../../assets/Icons/back.svg';
 import { ReactComponent as typeHome } from '../../assets/Icons/typeHome.svg';
 import Button from '../Button/Button';
@@ -12,11 +13,17 @@ import PropertyType from './PropertyType';
 
 import { back, container, floor, menu, overlay, properties, title } from './Menu.module.scss';
 
-export default function Menu() {
+export default function Menu({ setMenu }) {
   return (
-    <div className={overlay}>
+    <div
+      className={overlay}
+      onClick={() => setMenu({ menu: false })}
+      onKeyPress={() => setMenu({ menu: false })}
+      role="button"
+      tabIndex="0"
+    >
       <div className={menu}>
-        <Overflow>
+        <Overflow notScrollbar>
           <Container className={container}>
             <Container className={back}>
               <Back />
@@ -79,3 +86,7 @@ export default function Menu() {
     </div>
   );
 }
+
+Menu.propTypes = {
+  setMenu: ProtoTypes.func.isRequired,
+};
