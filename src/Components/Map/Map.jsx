@@ -1,5 +1,7 @@
+/* eslint-disable import/no-unresolved */
 import { useEffect, useRef, useState } from 'react';
-import mapboxgl from 'mapbox-gl';
+// eslint-disable-next-line import/no-webpack-loader-syntax
+import mapboxgl from '!mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import { container, canvas } from './Map.module.scss';
 import geojson from './geojson.mock.json';
