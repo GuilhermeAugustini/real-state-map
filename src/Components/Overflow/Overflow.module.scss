@@ -1,6 +1,32 @@
 .overflow {
-  max-height: 100vh;
   overflow-y: auto;
-  scrollbar-color: #a5a5a5;
+  overflow-x: hidden;
+  touch-action: auto;
+}
+
+.scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #48435c80 transparent;
+
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar {
+    width: 8px;
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #48435c80;
+    border-radius: 30px;
+  }
+}
+
+.notScroll {
   scrollbar-width: none;
+}
+
+.notScroll::-webkit-scrollbar {
+  width: 0;
 }
