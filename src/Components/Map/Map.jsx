@@ -5,7 +5,7 @@ import mapboxgl from '!mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import { container, canvas } from './Map.module.scss';
 import geojson from './geojson.mock.json';
-import Control from './control';
+import Control from './Controls/control';
 
 mapboxgl.accessToken =
   'pk.eyJ1IjoiZ3VpbGhlcm1lYXVndXN0aW5pIiwiYSI6ImNrcTlnajRkMzBwb2kyb21xeGRpMG1sc2gifQ.2zw3-BqnOepP6RsTxKL0yA';
@@ -27,7 +27,7 @@ export default function Map() {
     });
     map.current.on('load', () => {
       const c = Control();
-      map.current.addControl(c);
+      map.current.addControl(c, 'bottom-right');
       map.current.addSource('properties', {
         type: 'geojson',
         data: geojson,
