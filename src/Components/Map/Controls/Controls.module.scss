@@ -1,0 +1,56 @@
+@import '../../../index.module.scss';
+
+.container {
+  clear: both;
+  pointer-events: auto;
+  transform: translate(-17px, -25px);
+}
+
+.zoom {
+  height: 80px;
+  width: 40px;
+  border-radius: $border-radius;
+  background: #fff;
+  box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.25);
+  display: grid;
+  grid-auto-rows: 1fr 1fr;
+  align-content: center;
+}
+
+.zoomButtons {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  composes: flexCenter from global;
+
+  &:first-child {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+  }
+
+  & svg {
+    max-width: 12px;
+  }
+}
+
+.navigation {
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.25);
+  border-radius: $border-radius;
+  display: grid;
+  grid-auto-rows: 1fr;
+  align-content: center;
+  margin-bottom: 14px;
+}
+
+.navigationButton {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  composes: flexCenter from global;
+
+  & svg {
+    max-width: 12px;
+  }
+}
